@@ -155,3 +155,25 @@ and (orientation : landscape){
         width: 50%
     }
 }
+
+#container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 10;
+  bottom: 70px;
+}
+
+#subContainer {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin: 0 auto;
+  right: 93px;
+  top: 10px;
+}
+
+.container{
+  height: 260px;
+}
