@@ -1,0 +1,157 @@
+
+.cb_l_vertical{
+    display: flex;
+    flex-direction: row;
+}
+
+.cb_l_horizontal{
+    display: flex;
+    flex-direction: column;
+}
+
+.cb_flex{
+    flex: 1;
+}
+
+html, body, #cb_main{
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+#cb_top_bar{
+    height: 90px;
+    background: white;
+    align-items: flex-end;
+}
+.cb_bar_content{
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    margin: 0 8px;
+}
+#cb_bottom_bar{
+    height: 50px;
+    background: white
+}
+
+.cb_btn{
+    text-align: center;
+    padding: 12px 0;
+}
+
+.cb_btn > a,
+.cb_btn > .cb_user{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cb_btn > a#cb_foryou{
+    background-image: url('../img/For You.png');
+}
+
+.cb_btn > a#cb_share{
+    background-image: url('../img/share.png');
+}
+
+.cb_btn > a#cb_padnote{
+    background-image: url('../img/padnote.png');
+}
+
+.cb_btn > a#cb_score{
+    background-image: url('../img/LeON Score.png');
+}
+
+.cb_btn > a#cb_menu{
+    background-image: url('../img/menu.png');
+}
+
+.cb_btn > a#cb_leon{
+    background-image: url('../img/LeON.png');
+    width: 60px;
+}
+
+.cb_btn > .cb_user{
+    background-image: url('../img/Account Icon.png');
+    width: 38px;
+    height: 50px;
+    background-position: 0 5px;
+}
+
+
+#cb_body_content{
+    background: #fefefe;;
+}
+
+#cb_body_content .cb_stacts > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cb_body_content .cb_stacts > ul > li{
+    background: #dee0df;
+    border-radius: 50px;
+    height: 7.5vh;
+    margin: 10px 16px;
+    color: #a5a5a5;
+    justify-content: center;
+}
+
+.cb_sp {
+    padding-left: 16px;
+    padding-right: 24px;
+    position: relative;
+    z-index: 3;
+}
+
+.cb_pg{
+    height: 7.5vh;
+    z-index: 2;
+    width: calc(100% - 32px);
+    border-radius: 50px;
+    background: #fccf7f;
+    position: absolute;
+    /*transform: translateX(-16px) translateY(-16px);*/
+}
+
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : landscape){
+    #cb_body_content{
+        flex-direction: row;
+    }
+    .cb_counter{
+        background: brown;
+    }
+    .cb_stacts{
+        width: 50%
+    }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape){
+    #cb_body_content{
+        flex-direction: row;
+    }
+    .cb_counter{
+        background: brown;
+    }
+    .cb_stacts{
+        width: 50%
+    }
+}

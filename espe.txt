@@ -1,0 +1,31 @@
+Hola!
+
+Imagen Client - Performance Comp Lifestyle.png:
+
+Para ios 5, 6, 7 en html y css,
+
+Use siempre clases con presfix cb_ en css.
+
+Animacion pagina:
+
+Culaquier transicion.
+
+Animacion barras:
+
+El circulo empieza del primer punto desplazandose a derecha o izquierda
+El valor del circulo debe ser dinamico que nosotros lo podamos asignar cuando llegue a otro punto y debe decirnos en que punto esta,
+La velocidad de deplazamiento puede ajustarse.
+
+Los controles de animacion deben ser parametrizados y el codigo debe ser independiente del html "no incrustado", en caso de ser un control echo por ustedes adiccione el prefix cbj_
+
+La barra de arriba es de 90px.
+
+existe una barra de abajo que es de 50px, en esta imagen no se muestra, tome en consideracion.
+
+El archivo adjunto tiene el codigo html y css que actualmente usa, reuse las mismas css o cree nuevas, recuerde comentar para implementar esos cambios.
+
+Las imagenes no son icluidas esa seran remplazadas con animaciones.
+
+Ignore los ng-hide tags o cualquier otra cosa de angularjs
+
+Pueden enviar el codigo a este correo.
