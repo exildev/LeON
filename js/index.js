@@ -1,10 +1,15 @@
+
 var velocidad = 1;
 if (typeof(Storage) !== "undefined") {
     // Code for localStorage/sessionStorage.
     localStorage.setItem("velocidad", 1400);
     localStorage.setItem("maximo", 5);
-    localStorage.setItem("contador", 0);
-    if (localStorage.getItem("contador") !== localStorage.getItem("maximo")) {
+    if (!localStorage.hasOwnProperty('contador')) {
+      localStorage.setItem("contador", 0);
+    }
+    var con = parseInt(localStorage.getItem("contador")) + 1;
+    localStorage.setItem("contador", con);
+    if (localStorage.getItem("contador") < localStorage.getItem("maximo")) {
         velocidad = parseInt(localStorage.getItem("velocidad"));
     }
     spinner(subContainer);
@@ -14,6 +19,9 @@ if (typeof(Storage) !== "undefined") {
     console.log("Sorry! No Web Storage support..");
 }
 
+/*
+Función para crear el spinner
+*/
 function spinner(cont){
   var bar = new ProgressBar.Circle(cont, {
     color: '#aaa',
@@ -39,12 +47,9 @@ function spinner(cont){
       } else {
         circle.setText(value);
       }
-      var con = parseInt(localStorage.getItem("contador")) + 1;
-      localStorage.setItem("contador", con);
+
     }
   });
-
-
   bar.text.style.fontFamily = 'Montserrat, sans-serif';
   bar.text.style.fontWeight = 'bold';
   bar.text.style.fontSize = '2rem';
