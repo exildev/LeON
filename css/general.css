@@ -1,53 +1,53 @@
-
-.cb_l_vertical{
+.cb_l_vertical {
     display: flex;
     flex-direction: row;
 }
 
-.cb_l_horizontal{
+.cb_l_horizontal {
     display: flex;
     flex-direction: column;
 }
 
-.cb_flex{
+.cb_flex {
     flex: 1;
 }
 
-html, body, #cb_main{
+html, body, #cb_main {
     width: 100%;
     height: 100vh;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
-#cb_top_bar{
+#cb_top_bar {
     height: 90px;
     background: white;
     align-items: flex-end;
 }
-.cb_bar_content{
+
+.cb_bar_content {
     width: 100%;
     height: 60px;
     align-items: center;
     margin: 0 8px;
 }
-#cb_bottom_bar{
+
+#cb_bottom_bar {
     height: 50px;
     background: white
 }
 
-.cb_btn{
+.cb_btn {
     text-align: center;
     padding: 12px 0;
 }
 
-.cb_btn > a,
-.cb_btn > .cb_user{
+.cb_btn>a, .cb_btn>.cb_user {
     display: inline-block;
     width: 26px;
     height: 26px;
@@ -57,50 +57,50 @@ body{
     background-repeat: no-repeat;
 }
 
-.cb_btn > a#cb_foryou{
+.cb_btn>a#cb_foryou {
     background-image: url('../img/For You.png');
 }
 
-.cb_btn > a#cb_share{
+.cb_btn>a#cb_share {
     background-image: url('../img/share.png');
 }
 
-.cb_btn > a#cb_padnote{
+.cb_btn>a#cb_padnote {
     background-image: url('../img/padnote.png');
 }
 
-.cb_btn > a#cb_score{
+.cb_btn>a#cb_score {
     background-image: url('../img/LeON Score.png');
 }
 
-.cb_btn > a#cb_menu{
+.cb_btn>a#cb_menu {
     background-image: url('../img/menu.png');
 }
 
-.cb_btn > a#cb_leon{
+.cb_btn>a#cb_leon {
     background-image: url('../img/LeON.png');
     width: 60px;
 }
 
-.cb_btn > .cb_user{
+.cb_btn>.cb_user {
     background-image: url('../img/Account Icon.png');
     width: 38px;
     height: 50px;
     background-position: 0 5px;
 }
 
-
-#cb_body_content{
-    background: #fefefe;;
+#cb_body_content {
+    background: #fefefe;
+    ;
 }
 
-#cb_body_content .cb_stacts > ul{
+#cb_body_content .cb_stacts>ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#cb_body_content .cb_stacts > ul > li{
+#cb_body_content .cb_stacts>ul>li {
     background: #dee0df;
     border-radius: 50px;
     height: 7.5vh;
@@ -110,70 +110,76 @@ body{
 }
 
 .cb_sp {
+    width: calc(100% - 70px);
     padding-left: 16px;
     padding-right: 24px;
-    position: relative;
+    position: absolute;
     z-index: 3;
 }
 
-.cb_pg{
+.cb_pg {
     height: 7.5vh;
     z-index: 2;
-    width: calc(100% - 32px);
+    width: 15%;
     border-radius: 50px;
     background: #fccf7f;
+    position: relative;
+    right: 0;
+    left: 0;
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+    #cb_body_content {
+        flex-direction: row;
+    }
+    .cb_stacts {
+        width: 50%
+    }
+    .cb_pg {
+        width: calc(100% - 32px);
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+    #cb_body_content {
+        flex-direction: row;
+    }
+    .cb_stacts {
+        width: 50%
+    }
+    .cb_pg {
+        width: calc(100% - 32px);
+    }
+}
+
+#cb_container {
+    width: 32vh;
+    height: 32vh;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+    bottom: 70px;
+    border-radius: 50%;
+    background: white;
+    margin-bottom: -70px;
+}
+
+#cb_subContainer {
+    width: 18vh;
+    height: 18vh;
+    position: relative;
+    border-radius: 50%;
+    background: #dee0df;
+    margin: 0 auto;
+    right: 93px;
+    top: 10px;
+
+}
+
+.cb_text {
     position: absolute;
-    /*transform: translateX(-16px) translateY(-16px);*/
-}
-
-@media only screen
-and (min-device-width : 414px)
-and (max-device-width : 736px)
-and (orientation : landscape){
-    #cb_body_content{
-        flex-direction: row;
-    }
-    .cb_counter{
-        background: brown;
-    }
-    .cb_stacts{
-        width: 50%
-    }
-}
-
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : landscape){
-    #cb_body_content{
-        flex-direction: row;
-    }
-    .cb_counter{
-        background: brown;
-    }
-    .cb_stacts{
-        width: 50%
-    }
-}
-
-#container {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  margin: 0 auto;
-  z-index: 10;
-  bottom: 70px;
-}
-
-#subContainer {
-  width: 120px;
-  height: 120px;
-  position: relative;
-  margin: 0 auto;
-  right: 93px;
-  top: 10px;
-}
-
-.container{
-  height: 260px;
+    margin-top: 20vh;
+    margin-left: 6vh;
+    font-size: 2.6vh;
+    color: #a5a5a5;
 }
